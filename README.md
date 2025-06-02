@@ -1,70 +1,74 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 💼 Enterprise Expense Management System
 
-## Available Scripts
+An end-to-end web-based solution designed to help enterprises track and manage employee expenses. This system ensures secure access through JWT-based authentication and provides a responsive, intuitive UI for efficient interaction.
 
-In the project directory, you can run:
 
-### `npm start`
+## 🧾 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application consists of two major parts:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ✅ Backend (Java + Spring Boot)
+- Handles user authentication and authorization via JWT
+- Manages employee and expense data with MySQL
+- Provides secure REST APIs for frontend communication
 
-### `npm test`
+### ✅ Frontend (React.js)
+- Allows users to log in, submit, view, and manage expenses
+- Admins can manage all employee records and expenses
+- Communicates with backend via RESTful API using Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🛠️ Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have the following installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Java 17+**
+- **React.js** (v14 or higher)
+- **MySQL Server**
+- **Maven**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 How to Run the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔧 Step 1: Clone the Repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/yourusername/expense-management-system.git
+cd expense-management-system
+**
+**Backend Setup (Spring Boot)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Navigate to the backend directory:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd backend
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  **Create a MySQL database:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CREATE DATABASE expense_db;
 
-### Code Splitting
+**Frontend Setup (React.js)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Navigate to the frontend directory:**
 
-### Analyzing the Bundle Size
+cd ../frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ **Install dependencies:****
 
-### Making a Progressive Web App
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Configure API base URL:**
 
-### Advanced Configuration
+Open src/api.js or wherever API calls are defined and set:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+js
+const API = axios.create({
+  baseURL: 'http://localhost:8080/api',
+});
 
-### Deployment
+**Start the frontend server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
