@@ -1,0 +1,77 @@
+/* Navbar Styling */
+.MuiAppBar-root {
+    background: #4a2ea3; /* Purple Background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+  }
+  
+  /* Ensure navbar content is properly spaced */
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center;
+    gap: 20px; /* Adds spacing between items */
+    width: 100%;
+  }
+  
+  /* Left-aligned section (Title + Navigation) */
+  .navbar-left {
+    display: flex;
+    align-items: left;
+    gap: 20px;
+  }
+  
+  /* Right-aligned section (Switch + Icons) */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+  
+  /* Logo / Title */
+  .nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-title:hover {
+    color: #ddd;
+  }
+  
+  /* Navigation Buttons */
+  .nav-button {
+    font-size: 16px;
+    text-transform: none;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-button:hover {
+    color: #ddd;
+  }
+  
+  /* Switch and Icons */
+  .MuiSwitch-root {
+    margin-left: auto; /* Pushes switch to the right */
+  }
+  
+  .MuiIconButton-root {
+    color: white;
+  }
+  
+  /* Ensuring links remain styled */
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    color: #ddd;
+  }
+  
